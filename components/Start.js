@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet, ImageBackground, TouchableOpacity, TextInput,} from 'react-native';
+import { View, Text, Pressable, StyleSheet, ImageBackground, TouchableOpacity, TextInput, Platform, KeyboardAvoidingView  } from 'react-native';
 
 // Importing the default background image from the assets folder
 import BackgroundImage from "../assets/background-image.png";
@@ -27,9 +27,9 @@ export default class Start extends React.Component {
     blue: "#1B70A0",
     white: 'white'
   };
-  
-  
-  
+
+
+
 
   render() {
     return (
@@ -79,6 +79,8 @@ export default class Start extends React.Component {
                 style={styles.color4}
                 onPress={() => this.changeBgColor(this.colors.green)}
               ></TouchableOpacity>
+              {/*keyboard-fix for android phones*/}
+              {Platform.OS === 'android' ? <KeyboardAvoidingView behavior="height" /> : null}
             </View>
 
             {/*This will allow the user to click on a button and be redirected to the chat page */}
@@ -128,6 +130,7 @@ const styles = StyleSheet.create({
 
   box1: {
     backgroundColor: "#FFFFFF",
+    minHeight: 300,
     height: "46%",
     width: "88%",
     justifyContent: "space-around",
