@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet, ImageBackground, TouchableOpacity, TextInput,} from 'react-native';
-import { withSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Importing the default background image from the assets folder
 import BackgroundImage from "../assets/background-image.png";
@@ -11,7 +10,7 @@ export default class Start extends React.Component {
 
     this.state = {
       name: "",
-      bgColor: this.colors.black,
+      bgColor: this.colors.white,
     };
   }
 
@@ -24,8 +23,9 @@ export default class Start extends React.Component {
     black: "#090C08",
     purple: "#474056",
     grey: "#8A95A5",
-    green: "B9C6AE",
+    green: "#B9C6AE",
     blue: "#1B70A0",
+    white: 'white'
   };
   
   
