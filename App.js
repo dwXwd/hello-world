@@ -11,12 +11,15 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+const Stack = createStackNavigator();
+
 export default class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = { text: '' };
   }
+
 
 
 
@@ -28,7 +31,6 @@ export default class App extends React.Component {
 
   render() {
       // Create the navigator
-const Stack = createStackNavigator();
     return (
       
       <NavigationContainer>
@@ -74,20 +76,5 @@ added a new text-input
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column'
-  },
-  box1: {
-    flex: 10,
-    backgroundColor: 'purple'
-  },
-  box2: {
-    flex: 50,
-    backgroundColor: 'yellow'
-  },
-  box3: {
-    flex: 100,
-    backgroundColor: 'red'
-  }
+
 });
