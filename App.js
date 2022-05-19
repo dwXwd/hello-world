@@ -29,24 +29,30 @@ export default class App extends React.Component {
     Alert.alert(input.text);
   }
 
+  renderCustomActions = (props) => {
+    return <CustomActions {...props} />;
+  };
+
   render() {
-      // Create the navigator
+
+
+    // Create the navigator
     return (
-      
+
       <NavigationContainer>
-              <Stack.Navigator
-        initialRouteName="Start"
-      >
-        <Stack.Screen
-          name="Start"
-          component={Start}
-        />
-        <Stack.Screen
-          name="Chat"
-          component={Chat}
-        />
-      </Stack.Navigator>
-                {/*   <View style={styles.container}>
+        <Stack.Navigator
+          initialRouteName="Start"
+        >
+          <Stack.Screen
+            name="Start"
+            component={Start}
+          />
+          <Stack.Screen
+            name="Chat"
+            component={Chat}
+          />
+        </Stack.Navigator>
+        {/*   <View style={styles.container}>
 
 added a new text-input
           <View style={{ flex: 30, justifyContent: 'center' }}>
