@@ -27,7 +27,7 @@ Simple app to chat with somebody else and share pictures and location
 ### Install required packages from package.json
 
 -   Download this repository
--   Navigate to projeect's "root" folder 
+-   Navigate to project's "root" folder 
 -   Install required packages in package.json via terminal and npm install
 
 ## Run the App
